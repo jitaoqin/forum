@@ -27,7 +27,7 @@ public class RegisterController extends BaseController{
 	@RequestMapping(value="/register",method=RequestMethod.POST)
 	public ModelAndView register (HttpServletRequest request ,User user){
 		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.setViewName("/success");
+		modelAndView.setViewName("success");
 		userService.register(user);
 		setSessionUser(request, user);
 		return modelAndView	;
